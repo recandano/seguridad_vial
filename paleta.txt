@@ -1,0 +1,7 @@
+
+Paleta de colores v1.0
+
+Azul     -> aadcf2
+Morado   -> e3aaf2
+Rosa     -> f2a4d3
+Verde    -> A9EBCB

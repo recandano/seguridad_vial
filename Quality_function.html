@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguridad vial</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Handlee&display=swap"
+        rel="stylesheet">
+    <script src="/script.js"></script>
+</head>
+
+<body>
+    <section id="navbar">
+        <div class="container">
+            <div class="home_link_container">
+                <a href="index.html">Inicio</a>
+            </div>
+            <div class="link_container">
+                <navbar>
+                    <a href="Contexto.html">Contexto</a>
+                    <a href="Usuario.html"> Usuario</a>
+                    <a href="Quality_function.html">QFD</a>
+                    <a href="Especificaciones.html">Especificaciones de diseño</a>
+                    <a href="Arquitectura_funcional.html">Arquitectura funcional</a>
+                </navbar>
+            </div>
+        </div>
+    </section>
+
+    <section id="first_section" class="section_container_1">
+        <div class="container">
+            <div class="main_text_container">
+                <h1 class="main_title"> Características de ingeniería
+                </h1>
+                <p class="description_text ">
+                <nav class="two_columns_nav">
+                    <li>Capacidad de almacenamiento</li>
+                    <li>Número de cámaras</li>
+                    <li>Resolución de cámara</li>
+                    <li>Dimensiones de la cámara</li>
+                    <li>Tiempo de respuesta del sistema de alerta</li>
+                    <li>Efectividad de la alerta</li>
+                    <li>Tasa de falsos positivos</li>
+                    <li>Calidad de los sensores</li>
+                    <li>Resistencia del material</li>
+                    <li>Resistencia térmica de los componentes</li>
+                    <li>Consumo energético del sistema</li>
+                    <li>Ergonomía</li>
+                    <li>Fácil sincronización entre funda y cámara</li>
+                    <li>Precisión del GPS</li>
+                    <li>Complejidad del modelo</li>
+                    <li>Precisión del modelo</li>
+
+                </nav>
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="second_section" class="section_container_2">
+        <div class="container">
+            <div class="main_text_container">
+                <h1 class="main_title"> House of quality (Hoq)</h1>
+                <div class="container">
+                    <div class="main_text_container">
+                        <a href="/assets/files/Hoq.pdf" target="_blank">
+                            <img src="/assets/images/hoq.png" class="half_width_image">
+                        </a>
+                        <br></br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="" class="section_container_1">
+        <div class="container">
+            <div class="reduction_container_block">
+                <h2 class="title" style="padding: 3% 0 2% 0;">Análisis</h2>
+                <p class="description_text">
+                    Se realizó una evaluación de la Matriz de Relación (central)
+                    y la Matriz de Correlación (Techo) para identificar fenómenos de diseño.
+                </p>
+
+                <div class="matress_analysis_grid">
+                    <div class="table_cell_container title_cell_container">Fenómeno evaluado</div>
+                    <div class="table_cell_container title_cell_container">Observación</div>
+                    <div class="table_cell_container title_cell_container">Implicación en el diseño
+                    </div>
+                    <div class="table_cell_container row_cell_container">Filas vacías / Columnas
+                        vacías</div>
+                    <div class="table_cell_container row_cell_container">No se encontraron</div>
+                    <div class="table_cell_container row_cell_container">Todas las Características
+                        de Ingeniería (CI) están ligadas a un Requisito del Cliente (RC) y todos los RC están
+                        satisfechos por una CI.</div>
+                    <div class="table_cell_container row_cell_container">Distribución de relaciones
+                    </div>
+                    <div class="table_cell_container row_cell_container">No existen columnas vacías
+                        ni columnas con mucha concentración. La distribución es balanceada.</div>
+                    <div class="table_cell_container row_cell_container">No hay esfuerzos de
+                        ingeniería duplicados ni CI inútiles.</div>
+                    <div class="table_cell_container row_cell_container">La matriz es
+                        aproximadamente diagonal</div>
+                    <div class="table_cell_container row_cell_container">La matriz inicial no es
+                        diagonal, pero al reordenarla se consigue una distribución por bloques.</div>
+                    <div class="table_cell_container row_cell_container">El producto se puede
+                        descomponer en subsistemas de ingeniería relativamente independientes, lo que facilita la
+                        gestión del proyecto.</div>
+                </div>
+
+                <div style="text-align: center; font-family: 'Handlee'; font-size: 25px; margin-bottom: 1%;">
+                    Conclusiones Clave
+                </div>
+                <p class="description_text">
+                    <b style="font-size: 17px; text-align: justify;">
+                        La lista de prioridades revela un enfoque muy claro en el rendimiento y la fiabilidad en
+                        condiciones de uso reales del sistema de detección y alerta.<br><br>
+                        1. Prioridad Absoluta en el Rendimiento del Sistema (CI 1-3)<br>
+                        Los rankings 1, 2 y 3 (cámara, modelo y alerta) forman un bucle de retroalimentación
+                        crítica. El sistema de seguridad requiere una entrada visual de alta calidad (1) para alimentar
+                        un algoritmo fiable (2), cuya salida debe generar una respuesta efectiva (3). Si falla un
+                        eslabón, la promesa de seguridad del producto se rompe.<br><br>
+                        2. Enfoque en la Robustez y Fiabilidad (CI 3-9)<br>
+                        La Resistencia térmica es vital para operar bajo exposición al sol. El bajo consumo
+                        energético y la calidad de los sensores aseguran la estabilidad de los datos de entrada. La tasa
+                        de
+                        falsos positivos y el tiempo de respuesta impactan directamente en la aceptación y confianza del
+                        conductor hacia el sistema de seguridad.<br><br>
+                        3. Características Secundarias y de Usabilidad (CI 10-16)<br>
+                        Debido a la prioridad inferior de este grupo, la ingeniería debe garantizar que los
+                        aspectos de usabilidad y hardware secundario cumplan con un nivel de calidad "suficientemente
+                        bueno" y priorizar los otros grupos.
+                    </b>
+                </p>
+
+                <hr style="width: 100%; border: 1px solid #000000; margin: 40px 0;">
+
+                <div style="text-align: center; font-family: 'Handlee'; font-size: 25px; margin: 5% 0 4% 0;">
+                    Análisis y Decisión de conflictos
+                </div>
+                <p class="description_text" style="font-size: 17px;">Se identificaron conflictos críticos en la Matriz
+                    de Correlación (Techo). La
+                    resolución de estos trade-offs es la base de la estrategia de ingeniería.</p>
+                <div class="decision_analysis_grid">
+                    <div class="table_cell_container title_cell_container">CI en Conflicto</div>
+                    <div class="table_cell_container title_cell_container">Razón del Conflicto</div>
+                    <div class="table_cell_container title_cell_container">Decisión de Ingeniería
+                    </div>
+                    <div class="table_cell_container row_cell_container">Tiempo de respuesta (5) vs. Tasa de falsos
+                        positivos (7)</div>
+                    <div class="table_cell_container row_cell_container">Conflicto Crítico de IA (–): La rapidez extrema
+                        compromete el tiempo de verificación del algoritmo, aumentando los falsos positivos.</div>
+                    <div class="table_cell_container row_cell_container">Priorizar la Fiabilidad: Se establecerá un
+                        límite de Tasa de falsos positivos bajo, aceptando un Tiempo de respuesta ligeramente mayor para
+                        asegurar la credibilidad del sistema.</div>
+                    <div class="table_cell_container row_cell_container">Resistencia térmica (10) vs. Resistencia del
+                        material (9)
+                    </div>
+                    <div class="table_cell_container row_cell_container">Conflicto de Materiales (-): La durabilidad del
+                        material de la funda puede dificultar la disipación de calor necesaria para el hardware de la
+                        cámara.</div>
+                    <div class="table_cell_container row_cell_container">Inversión en Disipación: Se optará por
+                        materiales de alta calidad con alta resistencia térmica y se diseñará un sistema interno de
+                        disipación que aísle el hardware sensible, manteniendo la calidad y ergonomía de la superficie
+                        de contacto.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <section id="legal">
+            <p class="footer_text">
+                Agustin Zapiain, Regina Cándano y Hernán Nuño | Todos los derechos reservados.
+            </p>
+        </section>
+    </footer>
+</body>
+
+</html>

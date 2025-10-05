@@ -1,0 +1,438 @@
+:root {
+    --theme-color: #e77e93;
+    --pink-section-bg: #eac7ce;
+    --pink-section-brd: #f395cd;
+    --footer-background: #f395cd;
+    --ligth-box-shadow: rgba(0, 0, 0, 0.3);
+}
+
+body {
+    margin: 0;
+    margin-top: 10vh;
+    padding: 0;
+    background-color: var(--pink-section-bg);
+}
+
+navbar {
+    min-height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 20 px;
+    width: 100%;
+}
+
+li {
+    font-family: 'Handlee';
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+navbar a,
+.home_link_container a {
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Amatic SC';
+    color: #202020;
+    margin: 20px;
+}
+
+footer {
+    border-top: solid 1px black;
+    margin: 0;
+    margin-top: 2vh;
+    padding: 3vh;
+}
+
+.card_text {
+    font-family: 'Handlee';
+    font-size: 20px;
+    text-align: justify;
+    margin: 0.5cm;
+
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.two_columns_nav {
+    columns: 2;
+    width: 90%;
+    margin-left: 14%;
+}
+
+.title {
+    text-align: center;
+    font-family: 'Handlee';
+    font-size: 32px;
+    margin: 0;
+    font-weight: 500;
+}
+
+.subtitle {
+    font-family: 'Handlee';
+    font-size: 22px;
+    margin: 0;
+    font-weight: 500;
+}
+
+.reduction_container {
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+.reduction_container_block {
+    width: 80%;
+    margin: auto;
+}
+
+.home_link_container {
+    display: flex;
+    float: left;
+    width: 20%;
+}
+
+.link_container {
+    display: flex;
+    float: left;
+    margin: auto;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.section_container_1 {
+    display: flex;
+    align-items: center;
+    z-index: -1;
+    margin-top: 2vh;
+}
+
+.section_container_2 {
+    background-color: var(--theme-color);
+    min-height: 30vh;
+    display: flex;
+    align-items: center;
+    margin-top: 2vh;
+    box-shadow: 0 7px 8px #929292,
+        0 -4px 8px var(--ligth-box-shadow);
+}
+
+.half_width_container {
+    width: 50%;
+    display: flex;
+    float: left;
+    flex-direction: column;
+}
+
+.main_text_container {
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_title {
+    text-align: center;
+    font-family: 'Handlee';
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.main_image_container {
+    align-items: center;
+    justify-content: center;
+    z-index: 500;
+}
+
+.user_image_container {
+    padding-bottom: 2%;
+}
+
+.half_width_image {
+    display: flex;
+    width: 100%;
+    border-radius: 11px;
+    box-shadow: 0 16px 32px rgb(87, 83, 83);
+}
+
+.left_text {
+    display: flex;
+    justify-content: center;
+    margin-right: 10%;
+}
+
+.right_text {
+    display: flex;
+    margin-left: 10%;
+    text-align: right;
+}
+
+.description_text {
+    margin-top: 0;
+    font-family: 'Handlee';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.without_shadow {
+    box-shadow: none;
+    width: 99.5%;
+}
+
+.cursor_default:hover {
+    cursor: default;
+}
+
+/* layout marco teorico */
+
+.theoretical_framework {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 32px;
+    max-width: 100%;
+    margin: auto;
+}
+
+
+
+
+#navbar {
+    position: fixed;
+    top: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    z-index: 999;
+    background-color: var(--theme-color);
+    box-shadow: 0 4px 8px var(--ligth-box-shadow);
+}
+
+#first_section,
+#second_section {
+    margin: 0;
+    min-height: 60vh;
+}
+
+/* card styles */
+.home_card_container {
+    width: 60%;
+    margin: auto;
+}
+
+.h1_with_no_margin_top {
+    margin-top: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+.card {
+    padding: 5px;
+    position: relative;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(20, 20, 30, 0.08);
+    cursor: pointer;
+    transition: transform .2s ease;
+}
+
+.card a {
+    text-decoration: none
+}
+
+.card_content {
+    padding: 1.1rem;
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px 10px 0 0;
+}
+
+.theoretical_framework .card {
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.options_title {
+    font-family: 'Handlee';
+    font-size: 46px;
+    text-align: center;
+}
+
+.card_title,
+.card_link_a {
+    color: #111827;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+}
+
+.card_desc {
+    margin-top: 0.5rem;
+    color: #6B7280;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    text-align: justify;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 7px 8px #929292,
+        0 -4px 8px var(--ligth-box-shadow);
+}
+
+.card:hover .tooltip {
+    opacity: 1;
+}
+
+
+
+/* modal */
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+}
+
+.modal-backdrop.open {
+    display: grid;
+}
+
+.modal {
+    background: white;
+    border-radius: 12px;
+    min-width: 40%;
+    max-width: 90%;
+    min-height: 40%;
+    max-height: 90%;
+    overflow: hidden;
+    position: relative;
+}
+
+.modal img {
+    max-width: 100%;
+    max-height: 80vh;
+}
+
+.modal nav ul li a {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    font-family: 'Handlee';
+    transition: all 0.4s ease-in-out;
+}
+
+.modal nav ul li a:hover {
+    font-size: 21px;
+    color: var(--theme-color);
+    font-family: 'Handlee';
+    transition: all 0.4s ease-in-out;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    font-size: 22px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.footer_text {
+    text-align: center;
+    font-family: 'Barlow Semi Condensed';
+    margin: 0;
+}
+
+.three_quarters_with_container {
+    width: 75%;
+}
+
+
+/* Tablas de analisis usando grid */
+
+.matress_analysis_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: 1fr 3fr 3fr 3fr;
+    gap: 0;
+    margin: 40px auto;
+    max-width: 1200px;
+    border: solid 1px black;
+}
+
+.decision_analysis_grid {
+    display: grid;
+    grid-template-columns: 2fr 3fr 4fr;
+    grid-template-rows: 1fr 4fr 4fr;
+    gap: 0;
+    margin: 30px auto;
+    max-width: 1200px;
+    border: solid 1px black;
+}
+
+.table_cell_container {
+    display: flex;
+    align-items: center;
+    border: solid 1px black;
+    font-family: "Handlee";
+    font-size: 18px;
+}
+
+.title_cell_container {
+    padding: 2% 2%;
+    font-weight: 900;
+    text-align: center;
+    justify-content: center;
+}
+
+.row_cell_container {
+    text-align: justify;
+    padding: 2%;
+}
+
+/*Animaciones y transiciones*/
+a {
+    font-size: 26px;
+    transition: all 1.4s ease-in-out;
+}
+
+a:hover {
+    font-size: 25px;
+    color: #762333;
+    transition: all 0.3s ease-in-out;
+}
+
+.action span {
+    transition: .3s ease;
+}
+
+.action:hover span {
+    transform: translateX(4px);
+}
