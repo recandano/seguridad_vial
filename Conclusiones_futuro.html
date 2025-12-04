@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguridad vial</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Handlee&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <section id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="home_link_container">
+                    <a href="index.html">Inicio</a>
+                </div>
+                
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                
+                <div class="link_container" id="navMenu">
+                    <navbar>
+                        <a href="Contexto.html">Contexto</a>
+                        <a href="Usuario.html"> Usuario</a>
+                        <a href="Quality_function.html">QFD</a>
+                        <a href="Especificaciones.html">Especificaciones de diseño</a>
+                        <a href="Arquitectura_funcional.html">Arquitectura y descomposicion funcional</a>
+                        <a href="Generacion_conceptos.html"> Generación de conceptos</a>
+                        <a href="Matrices.html">Matrices</a>
+                        <a href="Disenio.html">Diseño</a>
+                        <a href="Fabricacion.html">Fabricación del sistema</a>
+                        <a href="Pruebas_Analisi.html">Pruebas y experimentación</a>
+                        <a href="Resultados.html">Resultados</a>
+                        <a href="Conclusiones_futuro.html">Conclusiones y Trabajo a futuro</a>
+                        <a> </a>
+                    </navbar>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="first_section" class="section_container_1" style="padding: 3%;">
+        <div class="container">
+            <h1 class="main_title">Conclusiones</h1>
+            <div class="reduction_container_block">
+                <span class="main_text_container">
+                    <p class="description_text">
+
+                        El desarrollo de este prototipo funcionó como una Prueba de Concepto sólida que permitió 
+                        comprobar la viabilidad técnica de fusionar visión computarizada y sensores biométricos 
+                        para la detección temprana de somnolencia. El sistema actual logra capturar, transmitir y
+                        procesar información en tiempo real, además de emitir alertas sonoras desde el volante 
+                        mediante el buzzer integrado.<br><br>
+
+                        Sin embargo, al proyectar su evolución hacia un Producto Mínimo Viable, surgieron varias 
+                        áreas clave de mejora. Una de ellas es la integración del hardware y del sistema embebido.
+                        Actualmente el prototipo depende de múltiples dispositivos, lo cual no es ideal para un 
+                        producto final. La meta es concentrar todo dentro de la misma dashcam, utilizando un sistema 
+                        más robusto como una Raspberry Pi o una placa personalizada. Con esto, el algoritmo de 
+                        detección podría ejecutarse directamente en el dispositivo, eliminando el módulo ESP32-CAM 
+                        adicional y la necesidad de una computadora externa, reduciendo así la latencia y logrando 
+                        un diseño más compacto y limpio.<br><br>
+
+                        Otra área importante es la robustez de los sensores y el desempeño en condiciones nocturnas. 
+                        Para operar correctamente en escenarios de baja iluminación —donde la somnolencia es más crítica— 
+                        se requerirá integrar una cámara infrarroja capaz de detectar parpadeos y expresiones sin 
+                        depender de la luz ambiental. Asimismo, será necesario sustituir los sensores de pulso actuales
+                        por modelos de mayor fidelidad, capaces de ofrecer mediciones estables incluso con el movimiento 
+                        natural de las manos durante la conducción.<br><br>
+
+                        Finalmente, también se identificó la importancia de mejorar la ergonomía y el diseño físico 
+                        del sistema. La carcasa del volante debe evolucionar hacia materiales automotrices como piel 
+                        sintética o textiles técnicos, con el fin de mejorar la comodidad, la durabilidad y la 
+                        sujeción. Esto no solo elevará la experiencia del usuario, sino que también permitirá obtener 
+                        lecturas biométricas más consistentes.<br><br>
+
+                        En conjunto, estos avances representan los pasos necesarios para transformar esta prueba 
+                        académica en un producto realista, confiable y listo para implementarse en escenarios cotidianos.
+                    </p>
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <section id="second_section" class="section_container_2" style="padding: 3% 0;">
+        <div class="container">
+            <h1 class="main_title">Evidencias Fotográficas</h1>
+            <div class="reduction_container">
+                <div class="main_image_container half_width_container" style="padding: 0 1%;">
+                    <img src="./assets/images/img2.png" class="half_width_image">
+                </div>
+                <div class="main_image_container half_width_container" style="padding: 0 1%;">
+                    <img src="./assets/images/img2.png" class="half_width_image">
+                </div>
+            </div>
+            <div class="reduction_container" style="margin-top: 2%;">
+                <div class="main_image_container half_width_container" style="padding: 0 1%;">
+                    <img src="./assets/images/img2.png" class="half_width_image">
+                </div>
+                <div class="main_image_container half_width_container" style="padding: 0 1%;">
+                    <img src="./assets/images/img2.png" class="half_width_image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <section id="legal">
+            <p class="footer_text">
+                Agustin Zapiain, Regina Cándano y Hernán Nuño | Todos los derechos reservados.
+            </p>
+        </section>
+    </footer>
+
+    <script src="script.js"> </script>
+</body>
+
+
+</html>

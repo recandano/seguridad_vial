@@ -11,23 +11,39 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Handlee&display=swap"
         rel="stylesheet">
-    <script src="/script.js"></script>
 </head>
 
 <body>
     <section id="navbar">
         <div class="container">
-            <div class="home_link_container">
-                <a href="index.html">Inicio</a>
-            </div>
-            <div class="link_container">
-                <navbar>
-                    <a href="Contexto.html">Contexto</a>
-                    <a href="Usuario.html"> Usuario</a>
-                    <a href="Quality_function.html">QFD</a>
-                    <a href="Especificaciones.html">Especificaciones de diseño</a>
-                    <a href="Arquitectura_funcional.html">Arquitectura funcional</a>
-                </navbar>
+            <div class="nav-wrapper">
+                <div class="home_link_container">
+                    <a href="index.html">Inicio</a>
+                </div>
+                
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                
+                <div class="link_container" id="navMenu">
+                    <navbar>
+                        <a href="Contexto.html">Contexto</a>
+                        <a href="Usuario.html"> Usuario</a>
+                        <a href="Quality_function.html">QFD</a>
+                        <a href="Especificaciones.html">Especificaciones de diseño</a>
+                        <a href="Arquitectura_funcional.html">Arquitectura y descomposicion funcional</a>
+                        <a href="Generacion_conceptos.html"> Generación de conceptos</a>
+                        <a href="Matrices.html">Matrices</a>
+                        <a href="Disenio.html">Diseño</a>
+                        <a href="Fabricacion.html">Fabricación del sistema</a>
+                        <a href="Pruebas_Analisi.html">Pruebas y experimentación</a>
+                        <a href="Resultados.html">Resultados</a>
+                        <a href="Conclusiones_futuro.html">Conclusiones y Trabajo a futuro</a>
+                        <a> </a>
+                    </navbar>
+                </div>
             </div>
         </div>
     </section>
@@ -115,26 +131,24 @@
                 <div style="text-align: center; font-family: 'Handlee'; font-size: 25px; margin-bottom: 1%;">
                     Conclusiones Clave
                 </div>
-                <p class="description_text">
-                    <b style="font-size: 17px; text-align: justify;">
-                        La lista de prioridades revela un enfoque muy claro en el rendimiento y la fiabilidad en
-                        condiciones de uso reales del sistema de detección y alerta.<br><br>
-                        1. Prioridad Absoluta en el Rendimiento del Sistema (CI 1-3)<br>
-                        Los rankings 1, 2 y 3 (cámara, modelo y alerta) forman un bucle de retroalimentación
-                        crítica. El sistema de seguridad requiere una entrada visual de alta calidad (1) para alimentar
-                        un algoritmo fiable (2), cuya salida debe generar una respuesta efectiva (3). Si falla un
-                        eslabón, la promesa de seguridad del producto se rompe.<br><br>
-                        2. Enfoque en la Robustez y Fiabilidad (CI 3-9)<br>
-                        La Resistencia térmica es vital para operar bajo exposición al sol. El bajo consumo
-                        energético y la calidad de los sensores aseguran la estabilidad de los datos de entrada. La tasa
-                        de
-                        falsos positivos y el tiempo de respuesta impactan directamente en la aceptación y confianza del
-                        conductor hacia el sistema de seguridad.<br><br>
-                        3. Características Secundarias y de Usabilidad (CI 10-16)<br>
-                        Debido a la prioridad inferior de este grupo, la ingeniería debe garantizar que los
-                        aspectos de usabilidad y hardware secundario cumplan con un nivel de calidad "suficientemente
-                        bueno" y priorizar los otros grupos.
-                    </b>
+                <p class="description_text" style=" text-align: justify;">
+                    La lista de prioridades revela un enfoque muy claro en el rendimiento y la fiabilidad en
+                    condiciones de uso reales del sistema de detección y alerta.<br><br>
+                    1. Prioridad Absoluta en el Rendimiento del Sistema (CI 1-3)<br>
+                    Los rankings 1, 2 y 3 (cámara, modelo y alerta) forman un bucle de retroalimentación
+                    crítica. El sistema de seguridad requiere una entrada visual de alta calidad (1) para alimentar
+                    un algoritmo fiable (2), cuya salida debe generar una respuesta efectiva (3). Si falla un
+                    eslabón, la promesa de seguridad del producto se rompe.<br><br>
+                    2. Enfoque en la Robustez y Fiabilidad (CI 3-9)<br>
+                    La Resistencia térmica es vital para operar bajo exposición al sol. El bajo consumo
+                    energético y la calidad de los sensores aseguran la estabilidad de los datos de entrada. La tasa
+                    de
+                    falsos positivos y el tiempo de respuesta impactan directamente en la aceptación y confianza del
+                    conductor hacia el sistema de seguridad.<br><br>
+                    3. Características Secundarias y de Usabilidad (CI 10-16)<br>
+                    Debido a la prioridad inferior de este grupo, la ingeniería debe garantizar que los
+                    aspectos de usabilidad y hardware secundario cumplan con un nivel de calidad "suficientemente
+                    bueno" y priorizar los otros grupos.
                 </p>
 
                 <hr style="width: 100%; border: 1px solid #000000; margin: 40px 0;">
@@ -180,6 +194,8 @@
             </p>
         </section>
     </footer>
+
+    <script src="script.js"> </script>
 </body>
 
 </html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguridad vial</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Handlee&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <section id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="home_link_container">
+                    <a href="index.html">Inicio</a>
+                </div>
+                
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                
+                <div class="link_container" id="navMenu">
+                    <navbar>
+                        <a href="Contexto.html">Contexto</a>
+                        <a href="Usuario.html"> Usuario</a>
+                        <a href="Quality_function.html">QFD</a>
+                        <a href="Especificaciones.html">Especificaciones de diseño</a>
+                        <a href="Arquitectura_funcional.html">Arquitectura y descomposicion funcional</a>
+                        <a href="Generacion_conceptos.html"> Generación de conceptos</a>
+                        <a href="Matrices.html">Matrices</a>
+                        <a href="Disenio.html">Diseño</a>
+                        <a href="Fabricacion.html">Fabricación del sistema</a>
+                        <a href="Pruebas_Analisi.html">Pruebas y experimentación</a>
+                        <a href="Resultados.html">Resultados</a>
+                        <a href="Conclusiones_futuro.html">Conclusiones y Trabajo a futuro</a>
+                        <a> </a>
+                    </navbar>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="first_section" class="section_container_1">
+        <div class="container" style="margin-top: 3%;">
+            <h1 class="title">Matriz morfológica</h1>
+            <div class="reduction_container_block">
+                <span class="main_text_container">
+                    <p class="description_text">
+                        <br>
+                        <i style="font-size: 25px;"> Combinaciones: </i>
+                        <br><br>
+                        A.Chupón | Velcro | Trim del vehículo | Cámara HD | sensor óptico | ESP32 | Cableado | Tarjeta
+                        SD |
+                        Rejas de ventilación | Plásticos (con fibra de carbono) | Pantalla con botones | switch
+                        <br><br>
+                        B.Chupón | Material elástico | Trim del vehículo | Cámara con NV | sensor óptico | ESP32 |
+                        Cableado|
+                        Tarjeta SD | Malla |Plásticos (con fibra de carbono) | Botones selectores | switch
+                        <br><br>
+                        C.Chupón|Material elástico|Trim del vehículo|Cámara con Nv| sensor óptico|ESP32|Cableado |
+                        Tarjeta
+                        SSD
+                        M.2 |Rejilla|Plásticos (con fibra de carbono)|Botones selectores|switch
+                        <br><br>
+                        D.Riel | Zipper | Organizador de cables | Cámara HD | Módulo AD8232 | Raspberry PI | Bluetooth |
+                        Memoria integrada | ventilador de cámaras | plásticos | pantalla con botones | switches
+                        <br><br>
+                        E.Adhesivos de succión | Material elástico | adhesivo | Cámara HD con NV | sensor óptico | ESP32
+                        |
+                        cableado | memoria integrada M.2 | Reja de ventilación | plásticos con fibra de carbono |
+                        botones
+                        selectores | pantalla táctil
+                    </p>
+                </span>
+                <span class="container">
+                    <figure class="fullsize_image_wrapper">
+                        <a href="./assets/images/matriz.png" target="_blank">
+                            <img src="./assets/images/matriz_preview.png" class="fullsize_image">
+                        </a>
+                        <figcaption class="overlay-label">Ver matriz</figcaption>
+                    </figure>
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <section id="first_section" class="section_container_2">
+        <div class="container" style="margin-top: 3%;">
+            <h1 class="title">Matriz de Pugh</h1>
+            <div class="reduction_container_block">
+                <span class="main_text_container">
+                    <p class="description_text">
+                        <br>
+                        El concepto B es el que se ve que es la opción más fuerte.Tiene el puntaje positivo más alto
+                        (+2) y el puntaje negativo más bajo (0).Esto indica que el Concepto B es superior a la Opción de
+                        referencia en dos criterios y no es inferior en ninguno.
+                        <br><br>
+                        Concepto E es la segunda opción más prometedora.Tiene un puntaje positivo de (+1) y un puntaje
+                        negativo de (-0).Es superior a la
+                        Referencia en un criterio y no es inferior en ninguno.
+                        <br><br>
+                        Concepto A y Concepto D están empatados en la tercera posición.Ambos tienen un puntaje positivo
+                        de ($+1) y un puntaje negativo de (-1).Esto
+                        significa que son mejores en un criterio, pero peores en otro, por lo que su rendimiento neto es
+                        igual al de la Opción de Referencia (1-1=0).
+                        <br><br>
+                        Concepto C es la opción más débil.Tiene un puntaje
+                        positivo de (+1) pero el puntaje negativo más alto (-2).Esto sugiere que aunque tiene una
+                        ventaja en un criterio, sus desventajas son mayores en otros dos.
+
+                    </p>
+                </span>
+                <span class="container">
+                    <figure class="fullsize_image_wrapper">
+                        <a href="./assets/files/f4matriz_de_pugh.pdf" target="_blank">
+                            <img src="./assets/images/pugh.png" class="fullsize_image">
+                        </a>
+                        <figcaption class="overlay-label">Ver matriz</figcaption>
+                    </figure>
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <section id="first_section" class="section_container_1">
+        <div class="container" style="margin-top: 3%;">
+            <h1 class="title">Matriz de Factibilidad</h1>
+            <div class="reduction_container_block">
+                <span class="main_text_container">
+                    <p class="description_text">
+                        <br>
+                        La Alternativa 1 demostró ser la más factible en casi todos los criterios analizados. El uso de
+                        componentes de bajo costo, como el ESP32 y una cámara HD, no solo hace que el proyecto sea
+                        económicamente viable, sino que también acelera el cronograma de desarrollo. A diferencia de las
+                        otras propuestas, no presenta riesgos técnicos insuperables ni costos excesivos que puedan
+                        comprometer su ejecución.
+                        <br><br>
+                        Aunque se identificó un desafío potencial en la precisión del sensor óptico en el volante y en
+                        el manejo de la privacidad de los datos, estos son problemas controlables y se ha definido una
+                        estrategia para abordarlos: se realizarán pruebas intensivas para validar el sensor y se
+                        implementarán políticas de privacidad transparentes.
+                        <br><br>
+                        En conclusión, este análisis preliminar nos permite tomar una decisión clara: proceder con la
+                        Alternativa 1. Su balance entre costo, tiempo de desarrollo y usabilidad la convierte en la
+                        opción ideal para un prototipo funcional y, potencialmente, para un producto final exitoso en el
+                        mercado.
+                        <br><br>
+                        Este enfoque nos permite mitigar riesgos, optimizar recursos y concentrar nuestros esfuerzos en
+                        una solución que tiene el mayor potencial de éxito.
+                    </p>
+                </span>
+                <span class="container">
+                    <figure class="fullsize_image_wrapper">
+                        <a href="./assets/images/matriz_factibilidad.jpg" target="_blank">
+                            <img src="./assets/images/matriz_factibilidad_prev.jpg" class="fullsize_image">
+                        </a>
+                        <figcaption class="overlay-label">Ver matriz</figcaption>
+                    </figure>
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <section id="second_section" class="section_container_2">
+        <div class="container" style="margin-top: 3%;">
+            <h1 class="title">Matriz de madurez</h1>
+            <div style="margin-top: 3%; display: flex; align-items: stretch; justify-content: center; margin-bottom: 6%;">
+                <div class="main_image_container half_width_container" style="width: 40%;">
+                    <figure class="fullsize_image_wrapper">
+                        <a href="./assets/files/f2_formatoAnalisisMadurezTecnologia.pdf" target="_blank">
+                            <img src="./assets/images/madurez.png" class="fullsize_image" >
+                        </a>
+                        <figcaption class="overlay-label">Ver matriz</figcaption>
+                    </figure>
+                    
+                </div>
+
+                
+
+                <div class="main_text_container half_width_container">
+                    <p class="description_text right_text">
+                        Consideramos que el proyecto es Factible, pero identificamos una Alta Complejidad Técnica y
+                        Legal que debe ser gestionada.
+                        <br><br>
+                        Técnicamente: Nuestro mayor desafío será desarrollar y entrenar la IA para que sea fiable,
+                        minimizando los falsos positivos (alertas innecesarias) y los falsos negativos (no detectar el
+                        sueño). La integración de los sensores HR en el textil también es un reto clave.
+                        <br><br>
+                        Legalmente: Identificamos un riesgo alto en el manejo de datos biométricos (rostro y ritmo
+                        cardíaco). Debemos priorizar una estrategia de privacidad y asegurarnos de cumplir con las leyes
+                        de protección de datos desde el inicio.
+                        Operacionalmente: Para que el producto sea aceptado, concluimos que debe ser muy cómodo
+                        (ergonómico) y fácil de instalar y usar (alertas no invasivas).
+                        <br><br>
+                        Recomendación Inmediata: Debemos iniciar una consulta legal sobre el manejo de datos y, en
+                        paralelo, comenzar un prototipo (Prueba de Concepto) para validar la fiabilidad de la IA y los
+                        sensores.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="first_section" class="section_container_1">
+        <div class="container" style="margin-top: 3%;">
+            <h1 class="title">Matriz de alternativas vs HoQ</h1>
+            <div class="reduction_container_block">
+                <span class="main_text_container">
+                    <p class="description_text">
+                        <br>
+                        Decisión Final: La Alternativa 1 (ESP32 + Cámara HD + Sensores Ópticos) demostró factibilidad en
+                        todos los criterios. El análisis del HoQ confirma que todas las características de ingeniería
+                        son viables técnica y económicamente.
+                    </p>
+                    <ul class="description_text">
+                        <li>Resolución de la cámara- CONTINUAR: HD 1080p mínimo para detección facial efectiva</li>
+                        <li>Precisión del modelo- CONTINUAR: exactitud mayor a 95% en detección somnolencia</li>
+                        <li>Efectividad de la alerta - CONTINUAR: Sistema escalonado (visual→sonidoa→vibración)</li>
+                        <li>Complejidad del modelo - OPTIMIZAR: Balance entre precisión y tiempo de respuesta</li>
+                        <li>Calidad de sensores - CONTINUAR: Sensores ópticos calibrados para ritmo cardíaco</li>
+                        <li>Tiempo de respuesta - CONTINUAR: Latencia menor a 500ms desde detección a alerta</li>
+                        <li>Consumo energético - OPTIMIZAR: Modo sleep inteligente cuando vehículo
+                    </ul>
+                </span>
+                <span class="container">
+                    <figure class="fullsize_image_wrapper">
+                        <a href="./assets/files/f3_formatoAnalisisHoQ.pdf" target="_blank">
+                            <img src="./assets/images/alternativa.png" class="fullsize_image">
+                        </a>
+                        <figcaption class="overlay-label">Ver matriz</figcaption>
+                    </figure>
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <section id="first_section" class="section_container_2">
+        <div class="container" style="margin-top: 3%;">
+            <h1 class="title">Matriz de decisión</h1>
+            <div class="reduction_container_block">
+                <span class="main_text_container">
+                    <p class="description_text">
+                        Ganador Ponderado: Concepto A: Base (HD, SD) - 199 Puntos (Seguido muy de cerca por B: 197
+                        Puntos)
+                        <br><br>
+                        Análisis: El resultado es un empate técnico entre el Concepto A (199) y el B (197). El Concepto
+                        C (136) queda descartado. El Criterio 3 (Costo) y 4 (Cronograma) favorecen al Concepto A,
+                        mientras que el Criterio 2 (Operacional) y 5 (Comercial) favorecen al Concepto B.
+                        <br><br>
+                        Fortalezas (A): Máxima factibilidad económica y de cronograma. Es la alternativa más rápida y
+                        barata de prototipar.
+                        <br><br>
+                        Debilidades (A): Menor potencial comercial y operacional. El uso de una Cámara HD estándar la
+                        hace susceptible a fallos por poca luz (modos de falla).
+                        <br><br>
+                        Fortalezas (B): Excelente potencial comercial y operacional. La Cámara con Night Vision (NV)
+                        resuelve el modo de falla por "Oclusión/bloqueo de la cámara (luz)" y es un gran argumento de
+                        venta.
+                        <br><br>
+                        Debilidades (B): Ligero incremento en costo y complejidad técnica/cronograma (integrar la cámara
+                        NV).
+                        <br><br>
+                        Recomendación Final: La decisión es estratégica. El Concepto A (Ganador f1) es la opción de
+                        "mínimo riesgo" y "mínimo costo". El Concepto B es la opción de "mejor producto", ya que
+                        resuelve una debilidad clave (la oscuridad). Dado que la diferencia de puntos (199 vs 197) es
+                        insignificante, se recomienda re-evaluar si el beneficio de mercado de la Cámara NV (Concepto B)
+                        justifica el ligero aumento de costo y tiempo sobre el Concepto A.
+                    </p>
+                </span>
+                <span class="container">
+                    <figure class="fullsize_image_wrapper">
+                        <a href="./assets/files/f5_formatoMatrizDecisionPonderada.pdf" target="_blank">
+                            <img src="./assets/images/decision.png" class="fullsize_image">
+                        </a>
+                        <figcaption class="overlay-label">Ver matriz</figcaption>
+                    </figure>
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <section id="legal">
+            <p class="footer_text">
+                Agustin Zapiain, Regina Cándano y Hernán Nuño | Todos los derechos reservados.
+            </p>
+        </section>
+    </footer>
+
+    <script src="script.js"> </script>
+</body>
+
+</html>

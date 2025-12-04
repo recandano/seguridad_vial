@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguridad vial</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Handlee&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <section id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="home_link_container">
+                    <a href="index.html">Inicio</a>
+                </div>
+                
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                
+                <div class="link_container" id="navMenu">
+                    <navbar>
+                        <a href="Contexto.html">Contexto</a>
+                        <a href="Usuario.html"> Usuario</a>
+                        <a href="Quality_function.html">QFD</a>
+                        <a href="Especificaciones.html">Especificaciones de diseño</a>
+                        <a href="Arquitectura_funcional.html">Arquitectura y descomposicion funcional</a>
+                        <a href="Generacion_conceptos.html"> Generación de conceptos</a>
+                        <a href="Matrices.html">Matrices</a>
+                        <a href="Disenio.html">Diseño</a>
+                        <a href="Fabricacion.html">Fabricación del sistema</a>
+                        <a href="Pruebas_Analisi.html">Pruebas y experimentación</a>
+                        <a href="Resultados.html">Resultados</a>
+                        <a href="Conclusiones_futuro.html">Conclusiones y Trabajo a futuro</a>
+                        <a> </a>
+                    </navbar>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="first_section" class="section_container_2" style="flex-direction: column;">
+        <div class="container">
+            <div class="main_text_container">
+
+                    <div class="container">
+                    <div class="reduction_container_block disenio_subsection_squares light_background">
+                        
+                    <div class="centered-subtitle" style="margin-top:1%;">
+                        <b>A. Análisis de Resultados</b>
+                    </div>
+                    <p class="description_text">
+                        En esta sección se evalúa el desempeño del sistema final (Arquitectura Distribuida:
+                    WROVER + ESP32 Estándar) frente a las métricas críticas definidas en la Casa de
+                    la Calidad (HoQ). Se analizan las decisiones de diseño, la escalabilidad y las
+                    lecciones aprendidas durante la experimentación
+                    </p>
+                    
+                        <div class="results_analysis_grid">
+                            <div class="table_cell_container title_cell_container">Característica de Ingeniería HoQ</div>
+                            <div class="table_cell_container title_cell_container">Validacion Experimental</div>
+                            <div class="table_cell_container title_cell_container">Nivel de cumplimiento</div>
+
+                            <div class="table_cell_container row_cell_container main_column_text"><b>4. Tiempo de respuesta (&lt 2s)</b></div>
+                            <div class="table_cell_container row_cell_container"><p><b>Resultado: ~250ms.</b> La arquitectura basada en WebSockets (en lugar de peticiones 
+                                HTTP tradicionales) eliminó el "handshake" repetitivo, manteniendo un túnel de datos abierto. Esto permite 
+                                que la alerta(Buzzer) suene casi instantáneamente tras la detección visual.</p></div>
+                            <div class="table_cell_container row_cell_container main_column_text"><b>SUPERADO</b></div>
+                            
+                            <div class="table_cell_container row_cell_container main_column_text"><b>11. Tasa de falsos positivos</b></div>
+                            <div class="table_cell_container row_cell_container">
+                                <p>
+                                    <b>Resultado: Baja.</b> El sistema implementa una <b>Lógica de Fusión de Datos</b>. Una alerta crítica requiere
+                                    la coincidencia de <b>Visual (EAR &lt 0.22)</b> y confirmación biométrica (tendencia de BPM). Además, el 
+                                    filtro de software ($N=10$) en los sensores eliminó los falsos picos provocados por el ruido eléctrico, 
+                                    que inicialmente disparaban alertas erróneas de 200 BPM.
+                                </p>
+                            </div>
+                            <div class="table_cell_container row_cell_container main_column_text"><b> CUMPLIDO</b></div>
+                            
+                            <div class="table_cell_container row_cell_container main_column_text"><b>7. Calidad de los sensores</b></div>
+                            <div class="table_cell_container row_cell_container">
+                                <p><b>Resultado: Estabilizada por Software.</b> El hardware base (ADC del ESP32) demostró ser ruidoso
+                                ante la transmisión WiFi. Sin embargo, la aplicación de filtros digitales (Media Móvil) y la segregación 
+                                del módulo de sensores en un chip independiente (ESP32 Estándar) lograron una señal limpia y útil para el 
+                                propósito de seguridad.
+                                </p>
+                            </div>
+                            <div class="table_cell_container row_cell_container main_column_text"><b>CUMPLIDO (Condicionado)</b></div>
+
+                            <div class="table_cell_container row_cell_container main_column_text"><b>9. Sincronización Funda-Cámara</b></div>
+                            <div class="table_cell_container row_cell_container">
+                                <p><b>Resultado: Transparente.</b> Al conectar ambos microcontroladores 
+                                a la misma red local (Hotspot dedicado), la sincronización es automática vía IP. No requiere emparejamiento 
+                                manual por parte del usuario, cumpliendo con la facilidad de uso.
+                                </p>
+                            </div>
+                            <div class="table_cell_container row_cell_container main_column_text"><b>CUMPLIDO</b></div>
+                            
+                            <div class="table_cell_container row_cell_container main_column_text"><b>6. Consumo energético</b></div>
+                            <div class="table_cell_container row_cell_container">
+                                <p><b>Resultado: Optimizado.</b> La desactivación del detector de Brownout y la reducción de frecuencia del 
+                                CPU a 160MHz permitieron que el sistema opere con la corriente limitada de un puerto USB estándar (500mA), 
+                                evitando los reinicios cíclicos observados en las primeras pruebas con el S3.
+                                </p>
+                            </div>
+                            <div class="table_cell_container row_cell_container main_column_text"><b>CUMPLIDO</b></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="reduction_container_block">                
+                <div class="disenio_subsection_squares light_background">
+                    <div class="centered-subtitle">
+                        <b>B. Análisis de Funcionamiento y Decisiones de Diseño</b>
+                    </div>
+                    <br>
+                    <ol>
+                        <li class="subtitle"><b>¿Por qué una Arquitectura Distribuida? (La Lección del Ruido)</b></li>
+                        <p class="description_text" style="font-size: 17px;"><br>
+                            Inicialmente se planteó usar un solo chip potente (ESP32-S3) para todo. Sin embargo, las 
+                            pruebas revelaron un fallo físico crítico: <b>Interferencia Electromagnética.</b>
+                        </p>
+                        <ul>
+                            <li>
+                                <p class="description_text" style="font-size: 17px; text-align: justify;">
+                                    <b>El problema:</b>
+                                    Cada vez que el radio WiFi transmitía paquetes de video (alto ancho de banda), 
+                                    generaba picos de consumo que introducían ruido en el Convertidor Analógico-Digital 
+                                    (ADC), corrompiendo la lectura cardiaca.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="description_text" style="font-size: 17px; text-align: justify;">
+                                    <b>La solución:</b> Separar funciones.
+                                </p>
+                            </li>
+                            <ul>
+                                <li>
+                                    <p class="description_text" style="font-size: 17px; text-align: justify;">
+                                        <b>ESP32-WROVER</b> Se dedica 100% al video, saturando su radio WiFi sin afectar
+                                        a los sensores
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="description_text" style="font-size: 17px; text-align: justify;">
+                                        <b>ESP32 Estándar:</b> Se dedica a leer los sensores en un entorno eléctrico más 
+                                        limpio y transmite solo telemetría ligera (JSON), minimizando el ruido.
+                                    </p>
+                                </li>
+                            </ul>
+                        </ul>
+                        <br>
+
+                        <li class="subtitle"><b>Selección del WROVER sobre el S3 (Madurez vs. Novedad)</b></li>
+                        <p class="description_text" style="font-size: 17px;"><br>
+                            Aunque el ESP32-S3 es más moderno y potente para IA, se optó por el <b>ESP32-WROVER </b>
+                            para la versión final por razones de <b>Estabilidad Operativa:</b>
+                        </p>
+                        <ul>
+                            <br>
+                            <li>
+                                <p class="description_text" style="font-size: 17px; text-align: justify;">
+                                    <b>Gestión de Energía:</b>
+                                    EEl S3 demostró ser extremadamente sensible a microcaídas de voltaje (Brownouts) 
+                                    al activar WiFi y Cámara simultáneamente, resultando en desconexiones constantes 
+                                    (Status: 255). El WROVER, con una arquitectura más madura (40nm vs 28nm del S3), 
+                                    gestionó mejor los picos de corriente con la fuente de alimentación disponible.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="description_text" style="font-size: 17px; text-align: justify;">
+                                    <b>Compatibilidad de Red:</b>
+                                    El stack WiFi del WROVER mostró mayor compatibilidad con la seguridad WPA2 del Hotspot 
+                                    utilizado, garantizando una conexión inmediata donde el S3 fallaba en la negociación.
+                                </p>
+                            </li>
+                        </ul>
+                    </ol>
+                </div>
+                 
+                <div class="disenio_subsection_squares light_background" style="margin-top: 6%;">
+                    <div class="centered-subtitle">
+                        <b>C. Escalabilidad y Viabilidad Comercial</b>
+                    </div>
+                    <br>
+                    <ol>
+                        <li class="subtitle"><b> ¿Es aplicable en el mundo real?</b></li>
+                        <p class="description_text" style="font-size: 17px;"><br>
+                            Sí. El prototipo demuestra que la tecnología de bajo costo es capaz de salvar vidas. La latencia 
+                            obtenida (250ms) es suficiente para reaccionar ante microsueños a velocidades de autopista (100 
+                            km/h = 27 metros/segundo).
+                        </p>
+                        <br>
+
+                        <li class="subtitle"><b>Transición a Producto Robusto (Industrialización)</b></li>
+                        <p class="description_text" style="font-size: 17px;"><br>
+                            Para escalar este prototipo a un producto comercial (Lote de producción), se sugieren los 
+                            siguientes cambios de ingeniería:
+                        </p>
+                        <ul>
+                            <li>
+                                <p class="description_text" style="font-size: 17px; text-align: justify;">
+                                    <b>Diseño de PCB Unificada:</b> Reemplazar los dos módulos de desarrollo por
+                                    una sola placa PCB personalizada que integre:
+                                </p>
+                            </li>
+                            <ul>
+                                <li>
+                                    <p class="description_text" style="font-size: 17px; text-align: justify;">
+                                        Un chip ESP32-S3 (bien alimentado con reguladores LDO de alta
+                                        calidad para evitar Brownouts)
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="description_text" style="font-size: 17px; text-align: justify;">
+                                        Un <b>ADC Externo Dedicado</b> (ej. ADS1115) para leer los sensores
+                                        cardiacos. Esto eliminaría el problema de ruido definitivamente sin
+                                        necesitar dos microcontroladores.
+                                    </p>
+                                </li>
+                            </ul>
+                            <li>
+                                <p class="description_text" style="font-size: 17px; text-align: justify;">
+                                    <b>Iluminación IR: </b>
+                                    Integrar LEDs infrarrojos y remover el filtro IR de la cámara
+                                    (OV2640 o OV3660 versión NoIR) para cumplir totalmente con el
+                                    requerimiento de funcionamiento nocturno.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="description_text" style="font-size: 17px; text-align: justify;">
+                                    <b>Cómputo en el Borde (Edge AI): </b>
+                                    El stack WiFi del WROVER mostró mayor compatibilidad con la seguridad WPA2 del Hotspot 
+                                    utilizado, garantizando una conexión inmediata donde el S3 fallaba en la negociación.
+                                </p>
+                            </li>
+                        </ul>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <footer style="margin-top: 0;">
+        <section id="legal">
+            <p class="footer_text">
+                Agustin Zapiain, Regina Cándano y Hernán Nuño | Todos los derechos reservados.
+            </p>
+        </section>
+    </footer>
+
+    <script src="script.js"> </script>
+</body>
+
+</html>

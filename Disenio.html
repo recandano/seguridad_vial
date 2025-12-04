@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguridad vial</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Handlee&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <section id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="home_link_container">
+                    <a href="index.html">Inicio</a>
+                </div>
+                
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                
+                <div class="link_container" id="navMenu">
+                    <navbar>
+                        <a href="Contexto.html">Contexto</a>
+                        <a href="Usuario.html"> Usuario</a>
+                        <a href="Quality_function.html">QFD</a>
+                        <a href="Especificaciones.html">Especificaciones de diseño</a>
+                        <a href="Arquitectura_funcional.html">Arquitectura y descomposicion funcional</a>
+                        <a href="Generacion_conceptos.html"> Generación de conceptos</a>
+                        <a href="Matrices.html">Matrices</a>
+                        <a href="Disenio.html">Diseño</a>
+                        <a href="Fabricacion.html">Fabricación del sistema</a>
+                        <a href="Pruebas_Analisi.html">Pruebas y experimentación</a>
+                        <a href="Resultados.html">Resultados</a>
+                        <a href="Conclusiones_futuro.html">Conclusiones y Trabajo a futuro</a>
+                        <a> </a>
+                    </navbar>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="first_section" class="section_container_1 ">
+        <div class="container">
+            <div class="main_text_container">
+                <h1 class="main_title"> Listado de partes </h1>
+                <br>
+
+                <nav class="two_columns_nav">
+                    <li class="big_letter_list">Micro Esp wrover 32</li>
+                    <li class="big_letter_list">Esp32 de 38 pines devkit </li>
+                    <li class="big_letter_list">4 sensores sen-11574 </li>
+                    <li class="big_letter_list">3 tornillos m4</li>
+                    <li class="big_letter_list">Una tuerca m4</li>
+                    <li class="big_letter_list">Cinta doble cara</li>
+                    <li class="big_letter_list">Volante de Wii </li>
+                    <li class="big_letter_list">Resortes de 7mm </li>
+                    <li class="big_letter_list">Tela</li>
+                    <li class="big_letter_list">Compuadora</li>
+                    <li class="big_letter_list">Cable usb-micro usb</li>
+                    <li class="big_letter_list">Carcasa de PLC</li>
+                </nav>
+                
+            </div>
+        </div>
+    </section>
+
+
+    <section id="second_section" class="section_container_2">
+        <div class="container">
+            <div class="reduction_container_block">
+                <h2 class="title" style="margin: 7% auto 3% auto;">Diseño de detalle: cálculo y selección de componentes</h2>
+                <br>
+                <p class="description_text">
+                    La arquitectura final se fundamenta en un diseño de Procesamiento Distribuido,
+                    desacoplando la adquisición de video de la telemetría biométrica para maximizar la
+                    estabilidad del sistema.
+                </p>
+                
+                <div class="disenio_subsection_squares light_background">
+                    <div class="centered-subtitle">
+                        <b>A. Selección de Microcontroladores (Arquitectura Dual)</b>
+                    </div>
+                    <br>
+                    <p class="description_text" style="font-size: 17px; text-align: justify;">
+                        Se descartó el uso de un solo SoC para todas las tareas. Las pruebas preliminares
+                        demostraron que el ruido eléctrico generado por la transmisión WiFi de video
+                        afectaba la precisión del ADC (Convertidor Analógico-Digital) necesario para los
+                        sensores cardiacos.
+                    </p>
+                    <br>
+                    <ul>
+                        <li class="subtitle"><b>Módulo de Visión (Freenove ESP32-WROVER):</b></li>
+                        <ul>
+                            <br>
+                            <li>
+                                <p class="description_text" style="font-size: 17px; text-align: justify;">
+                                    <b>Criterio de Selección:</b>
+                                    Se priorizó la <b>Estabilidad y Madurez</b> sobre la
+                                    potencia bruta. Aunque se evaluaron chips más nuevos (S3), el
+                                    WROVER ofreció la robustez necesaria en la pila WiFi/TCP para
+                                    garantizar una transmisión continua sin caídas.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="description_text" style="font-size: 17px; text-align: justify;">
+                                    <b>Memoria Crítica:</b>
+                                    La presencia de <b>4MB de PSRAM</b> externa es el
+                                    factor habilitador. El streaming de video MJPEG a resolución VGA
+                                    (640x480) requiere buffers de memoria que exceden la capacidad de
+                                    un ESP32 estándar (520KB). Sin PSRAM, la resolución se limitaría a
+                                    160x120, insuficiente para la detección ocular precisa.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="description_text" style="font-size: 17px; text-align: justify;">
+                                    <b>Sensor de Imagen: OV2640</b> Seleccionado por su capacidad de
+                                    compresión JPEG por hardware, permitiendo enviar tramas
+                                    comprimidas directamente a la red sin saturar el CPU del
+                                    microcontrolador.
+                                </p>
+                            </li>
+                        </ul>
+                    </ul>
+                    <br>
+                    <ul>
+                        <li class="subtitle"><b>Módulo de Biométrico y de Actuación (ESP32 DevKit V1 - Estándar):</b></li>
+                        <ul>
+                            <br>
+                            <li>
+                                <p class="description_text" style="font-size: 17px; text-align: justify;">
+                                    <b>Función Híbrida:</b>
+                                    Este módulo actúa como <b>Hub de Sensores y Actuadores.</b>
+                                </p>
+                            </li>
+                            <li>
+                                <p class="description_text" style="font-size: 17px; text-align: justify;">
+                                    <b>Entrada (Sensores):</b>
+                                    Gestiona la lectura multiplexada de 4 sensores
+                                    ópticos analógicos mediante un algoritmo de muestreo preciso a
+                                    500Hz.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="description_text" style="font-size: 17px; text-align: justify;">
+                                    <b>Salida (Actuador/Buzzer):</b> Integra un <b>Zumbador Piezoeléctrico (Buzzer) </b>
+                                    conectado a GPIO digital.
+                                    <ul>
+                                        <li> <i>Justificación:</i> Se colocó en este módulo y no en la cámara para
+                                        reducir la carga de interrupciones en el WROVER (que está
+                                        ocupado con video) y aprovechar el canal bidireccional de
+                                        WebSockets.</li>
+                                    </ul>
+                                </p>
+                            </li>
+                            <li>
+                                <p class="description_text" style="font-size: 17px; text-align: justify;">
+                                    <b>Protocolo: </b>
+                                    WebSocket Bidireccional. Permite enviar datos cardiacos
+                                    (Salida) y recibir comandos de alerta (Entrada: ALARM_ON) en el mismo
+                                    socket TCP persistente.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="description_text" style="font-size: 17px; text-align: justify;">
+                                    <b>Diseño de detalle: </b>
+                                    Cálculo y selección de componentes.
+                                </p>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+                
+                <div class="disenio_subsection_squares light_background" style="margin-top:5%;">
+                    <div class="centered-subtitle">
+                        <b>B. Ingeniería de Señales (Pre-procesamiento)</b>
+                    </div>
+                    <br>
+                    <p class="description_text" style="font-size: 17px;">
+                        Los sensores ópticos presentaron ruido de alta frecuencia debido a fluctuaciones en
+                        el riel de alimentación.
+                    </p>
+                    <br>
+                    <ul>
+                        <li class="subtitle"><b>Solución de Software:</b> implementación de un <b>Filtro de Media Móvil (Moving Average)</b> con ventana N=10.</li>
+                        <ul>
+                            <br>
+                            <li>
+                                <p class="description_text" style="font-size: 17px; text-align: justify;">
+                                    <b>Función: </b>
+                                    <span class="formula">
+                                        <span>V</span><sub>out</sub>
+                                        <span> = </span>
+                                        <span>(1/10)</span>
+                                        <span class="sum">
+                                        &Sigma;<span class="small">i=0</span><span class="small" style="margin-top:-0.15em">⁹</span>
+                                        </span>
+                                        <span> </span>
+                                        <span>V</span><sub>in</sub><span>[t − i]</span>
+                                    </span>
+                                </p>
+                            </li>
+                            <li>
+                                <p class="description_text" style="font-size: 17px; text-align: justify;">
+                                    Este filtro digital elimina los "picos" de ruido transitorio sin introducir el
+                                    retraso de fase que causaría un filtro más complejo, asegurando que el
+                                    dato cardiaco esté sincronizado temporalmente con el video.
+                                </p>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>  
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <footer style="margin-top: 0;">
+        <section id="legal">
+            <p class="footer_text">
+                Agustin Zapiain, Regina Cándano y Hernán Nuño | Todos los derechos reservados.
+            </p>
+        </section>
+    </footer>
+
+    <script src="script.js"> </script>
+</body>
+
+</html>
